@@ -1,0 +1,12 @@
+Source: ros-hydro-rqt-paramedit
+Section: misc
+Priority: extra
+Maintainer: Christian Dornhege <c.dornhege@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-hydro-catkin, ros-hydro-qt-paramedit, ros-hydro-roscpp, ros-hydro-rqt-gui, ros-hydro-rqt-gui-cpp
+Homepage: http://ros.org/wiki/rqt_paramedit
+Standards-Version: 3.9.2
+
+Package: ros-hydro-rqt-paramedit
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-qt-paramedit, ros-hydro-roscpp, ros-hydro-rqt-gui, ros-hydro-rqt-gui-cpp
+Description: rqt_paramedit - a rqt plugin for editing parameters using qt_paramedit.
