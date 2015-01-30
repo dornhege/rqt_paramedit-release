@@ -1,0 +1,12 @@
+Source: ros-hydro-qt-paramedit
+Section: misc
+Priority: extra
+Maintainer: Christian Dornhege <c.dornhege@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), libqt4-dev, ros-hydro-catkin, ros-hydro-roscpp
+Homepage: http://ros.org/wiki/qt_paramedit
+Standards-Version: 3.9.2
+
+Package: ros-hydro-qt-paramedit
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt4-dbus, libqt4-network, libqt4-script, libqt4-test, libqt4-xml, libqtcore4, ros-hydro-roscpp
+Description: A GUI application for viewing and editing ROS parameters.
