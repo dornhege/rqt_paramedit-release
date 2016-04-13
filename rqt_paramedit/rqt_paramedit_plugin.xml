@@ -1,0 +1,17 @@
+<library path="lib/librqt_paramedit">
+    <class name="rqt_paramedit/ParamEdit" type="rqt_paramedit::ParamEdit" base_class_type="rqt_gui_cpp::Plugin">
+        <description>
+            A GUI plugin to view and edit parameters.
+        </description>
+        <qtgui>
+            <group>
+                <label>Configuration</label>
+                <icon type="theme">folder</icon>
+                <statustip>Plugins related to configuration.</statustip>
+            </group>
+            <label>Param Edit</label>
+            <icon type="theme">image-x-generic</icon>
+            <statustip>A GUI plugin to view and edit parameters.</statustip>
+        </qtgui>
+    </class>
+</library>
