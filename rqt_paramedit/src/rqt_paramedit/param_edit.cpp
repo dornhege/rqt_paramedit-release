@@ -3,7 +3,7 @@
 #include <QMessageBox>
 #include "param_root_chooser.h"
  
-PLUGINLIB_DECLARE_CLASS(rqt_paramedit, ParamEdit, rqt_paramedit::ParamEdit, rqt_gui_cpp::Plugin)
+PLUGINLIB_EXPORT_CLASS(rqt_paramedit::ParamEdit, rqt_gui_cpp::Plugin)
 
 namespace rqt_paramedit
 {

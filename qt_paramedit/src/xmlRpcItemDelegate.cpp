@@ -43,7 +43,7 @@ XmlRpcItemDelegate::~XmlRpcItemDelegate()
 {
 }
 
-QWidget* XmlRpcItemDelegate::createEditor(QWidget* parent, const QStyleOptionViewItem & option, 
+QWidget* XmlRpcItemDelegate::createEditor(QWidget* parent, const QStyleOptionViewItem & option,
       const QModelIndex & index) const
 {
    // based on the index figure out which data type we are editing:
@@ -80,7 +80,7 @@ void XmlRpcItemDelegate::setModelData(QWidget* editor, QAbstractItemModel* model
 void XmlRpcItemDelegate::updateEditorGeometry(QWidget* editor, const QStyleOptionViewItem & option,
       const QModelIndex & index) const
 {
-   QStyledItemDelegate::updateEditorGeometry(editor, option, index); 
+   QStyledItemDelegate::updateEditorGeometry(editor, option, index);
 }
 
 QString XmlRpcItemDelegate::displayText(const QVariant & value, const QLocale & locale) const

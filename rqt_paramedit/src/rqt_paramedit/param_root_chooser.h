@@ -1,7 +1,7 @@
 #ifndef PARAM_ROOT_CHOOSER_h
 #define PARAM_ROOT_CHOOSER_h
 
-#include <QtGui/QDialog>
+#include <QDialog>
 #include <string>
 #include <vector>
 #include "ui_param_root_chooser.h"

@@ -7,21 +7,10 @@ find_package(catkin REQUIRED COMPONENTS
   rqt_gui_cpp
   rqt_gui)
 
-find_package(Qt4 COMPONENTS QtCore QtGui REQUIRED)
-include(${QT_USE_FILE})
-
-qt4_wrap_ui(uis_h
-    src/rqt_paramedit/param_root_chooser.ui)
-
-set(rqt_paramedit_SRCS
-    src/rqt_paramedit/param_edit.cpp
-    src/rqt_paramedit/param_root_chooser.cpp
-    )
-
-set(rqt_paramedit_HDRS
-    include/rqt_paramedit/param_edit.h
-    src/rqt_paramedit/param_root_chooser.h
-    )
+find_package(Qt5 COMPONENTS Core Gui Widgets REQUIRED)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
 
 set(rqt_paramedit_INCLUDE_DIRECTORIES
     include
@@ -29,19 +18,32 @@ set(rqt_paramedit_INCLUDE_DIRECTORIES
     )
 
 catkin_package(
-    INCLUDE_DIRS ${rqt_paramedit_INCLUDE_DIRECTORIES}
+    INCLUDE_DIRS include
     LIBRARIES ${PROJECT_NAME}
     CATKIN_DEPENDS roscpp qt_paramedit rqt_gui_cpp rqt_gui
 )
 catkin_python_setup()
 
-qt4_wrap_cpp(rqt_paramedit_MOCS ${rqt_paramedit_HDRS})
+#set(rqt_paramedit_HDRS
+#    include/rqt_paramedit/param_edit.h
+#    src/rqt_paramedit/param_root_chooser.h
+#    )
+#qt4_wrap_cpp(rqt_paramedit_MOCS ${rqt_paramedit_HDRS})
 
 include_directories(${rqt_paramedit_INCLUDE_DIRECTORIES} ${catkin_INCLUDE_DIRS})
-add_library(${PROJECT_NAME} ${rqt_paramedit_SRCS} ${rqt_paramedit_MOCS} ${uis_h})
-target_link_libraries(${PROJECT_NAME} ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${catkin_LIBRARIES})
+add_library(${PROJECT_NAME}
+    src/rqt_paramedit/param_edit.cpp
+    src/rqt_paramedit/param_root_chooser.cpp
+    include/rqt_paramedit/param_edit.h
+    src/rqt_paramedit/param_root_chooser.h
+    src/rqt_paramedit/param_root_chooser.ui)
+target_link_libraries(${PROJECT_NAME}
+    Qt5::Core
+    Qt5::Gui
+    Qt5::Widgets
+    ${catkin_LIBRARIES})
 
-find_package(class_loader)
+find_package(class_loader REQUIRED)
 class_loader_hide_library_symbols(${PROJECT_NAME})
 
 install(FILES rqt_paramedit_plugin.xml

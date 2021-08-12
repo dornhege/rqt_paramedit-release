@@ -1,6 +1,6 @@
-<package>
+<package format="2">
   <name>rqt_paramedit</name>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <description>
      rqt_paramedit - a rqt plugin for editing parameters using qt_paramedit.
   </description>
@@ -13,14 +13,15 @@
   <url type="bugtracker">https://github.com/dornhege/rqt_paramedit/issues</url>
 
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>roscpp</build_depend>
-  <build_depend>qt_paramedit</build_depend>
-  <build_depend>rqt_gui_cpp</build_depend>
-  <build_depend>rqt_gui</build_depend>
-  <run_depend>roscpp</run_depend>
-  <run_depend>qt_paramedit</run_depend>
-  <run_depend>rqt_gui_cpp</run_depend>
-  <run_depend>rqt_gui</run_depend>
+  <depend>roscpp</depend>
+  <depend>qtbase5-dev</depend>
+  <depend>libqt5-core</depend>
+  <depend>libqt5-gui</depend>
+  <depend>libqt5-widgets</depend>
+
+  <depend>qt_paramedit</depend>
+  <depend>rqt_gui_cpp</depend>
+  <depend>rqt_gui</depend>
 
   <export>
       <rqt_gui plugin="${prefix}/rqt_paramedit_plugin.xml"/>

@@ -46,8 +46,8 @@ class XmlRpcModel : public QAbstractItemModel
 
    public:
       XmlRpcModel(XmlRpc::XmlRpcValue* rootData, const std::string & rootPath, ros::NodeHandle* nh);
-      ~XmlRpcModel();
- 
+      virtual ~XmlRpcModel();
+
       QModelIndex index(int row, int column, const QModelIndex & parent = QModelIndex()) const;
       QModelIndex parent(const QModelIndex & index) const;
 
