@@ -1,3 +1,28 @@
+## rqt_paramedit (melodic) - 1.0.1-1
+
+The packages in the `rqt_paramedit` repository were released into the `melodic` distro by running `/usr/bin/bloom-release rqt_paramedit --track melodic --rosdistro melodic --new-track` on `Thu, 12 Aug 2021 14:21:33 -0000`
+
+These packages were released:
+- `qt_paramedit`
+- `rqt_paramedit`
+
+Version of package(s) in repository `rqt_paramedit`:
+
+- upstream repository: https://github.com/dornhege/rqt_paramedit.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `1.0.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.7`
+- catkin_pkg version: `0.4.23`
+- rosdep version: `0.21.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## rqt_paramedit (indigo) - 1.0.0-2
 
 The packages in the `rqt_paramedit` repository were released into the `indigo` distro by running `/usr/bin/bloom-release rqt_paramedit --track indigo --rosdistro indigo --new-track` on `Wed, 13 Apr 2016 12:32:01 -0000`
