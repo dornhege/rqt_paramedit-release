@@ -1,0 +1,12 @@
+Source: ros-melodic-rqt-paramedit
+Section: misc
+Priority: optional
+Maintainer: Christian Dornhege <c.dornhege@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), libqt5core5a, libqt5gui5, libqt5widgets5, qtbase5-dev, ros-melodic-catkin, ros-melodic-qt-paramedit, ros-melodic-roscpp, ros-melodic-rqt-gui, ros-melodic-rqt-gui-cpp
+Homepage: http://ros.org/wiki/rqt_paramedit
+Standards-Version: 3.9.2
+
+Package: ros-melodic-rqt-paramedit
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt5core5a, libqt5gui5, libqt5widgets5, qtbase5-dev, ros-melodic-qt-paramedit, ros-melodic-roscpp, ros-melodic-rqt-gui, ros-melodic-rqt-gui-cpp
+Description: rqt_paramedit - a rqt plugin for editing parameters using qt_paramedit.
